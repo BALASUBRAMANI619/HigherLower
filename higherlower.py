@@ -1,16 +1,13 @@
 import random, os
 from game_data import data
 
-
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
-
 
 def format_data(account):
     country_name = account['name']
     rank = account['Rank']
     return f"country name: {country_name}"# and Rank is {rank}"
-
 
 def compare_answer(a,b):
         print(f"a: {a}")
@@ -49,11 +46,6 @@ print(f"Compare the country B {format_data(country_b)}.")
 answer = input("Enter the country which has highest rank, A or B ").upper()
 #compare the values and return the data correct data and correct answer "A" or "B"
 compare,compare_value = compare_answer(country_a,country_b)
-
-#Print Correct answer and Guessed answer
-#print(f"Compare {compare}")
-#print(f"Answer {answer}")
-#print(f"Compare Value {compare_value}")
 
 #set the score value and i value to zero
 score = 0
